@@ -9,9 +9,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        helloWorld()
-        lessonOne()
-
+            lessonTwo()
     }
 
     private fun helloWorld (){
@@ -60,6 +58,21 @@ class MainActivity : AppCompatActivity() {
 
         }
         if (i == 3) print("Do")
+
+    }
+
+    fun lessonTwo(){
+        //массив
+        var myArray = arrayOf (1,2,3)
+        print(myArray[0]);
+        myArray.size
+
+        var a = 0
+        var myArray2 = arrayOf("Frodo", "Sam", "Marry", "Pippin")
+        while (a < 4){
+            println(myArray2[a] +  " "  + "good name hobbit")
+            a++
+        }
 
     }
 }
