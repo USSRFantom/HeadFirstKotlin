@@ -2,6 +2,7 @@ package space.ussrfantom.headfirstkotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -10,6 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
             lessonTwo()
+        lessonThree()
+        lessonThreeFour(5, 4)
+
+        var myArray = arrayOf("one", "two", "three")
+        var b = lessonThreeFive(myArray)
+        println(b)
+
+
+
     }
 
     private fun helloWorld (){
@@ -74,5 +84,36 @@ class MainActivity : AppCompatActivity() {
             a++
         }
 
+    }
+
+
+    fun lessonThree(){
+        lessonTreeOne(5, 7)
+        var a = lessonThreeTwo(5, 4)
+        println(a)
+        Log.i("1231231231231", a.toString())
+        lessonThreeThree(5, 4)
+    }
+    //вызов метода с 2 параметрами
+    fun lessonTreeOne(a: Int, b: Int){
+        val result = a + b
+    }
+
+    fun lessonThreeTwo(a1: Int, a2: Int): Int {
+
+        return if (a1 < a2) a1 else a2
+    }
+
+    fun lessonThreeThree(a1: Int, a2: Int): Unit{
+       var b =  if (a1 < a2) a1 else a2
+        println(b)
+    }
+
+    fun lessonThreeFour(a1: Int, a2: Int): Int = if(a1 < a2) a1 else a2
+
+
+    fun lessonThreeFive(meArray: Array<String>): String {
+        meArray[(Math.random() * meArray.size).toInt()]
+        return  meArray[(Math.random() * meArray.size).toInt()]
     }
 }
